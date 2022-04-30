@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins light';
+}
+body{
+    background: linear-gradient(120deg, silver, rgb(34, 33, 33));
+}
+header{  
+    height: 13vh;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    justify-content: end;
+    padding-top: 40px;
+}
+nav li{
+    list-style-type: none;
+    padding: 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+nav a:hover{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    transition: all 1s ease;
+}
+nav a:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.container{
+    margin-top: 40px;
+    width: 100%;
+}
+.input-text{
+    background:linear-gradient(120deg, rgb(134, 91, 10), rgb(228, 228, 98));
+    padding: 10px;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.input-text h1{
+    display: flex;
+    font-size: 18px;
+    text-transform: capitalize;
+    justify-content: center;
+    color: rgb(250, 250, 250);
+    margin-bottom:30px;
+     margin-top: 30px;
+}
+.input{
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    display: block;
+    width: 90%
+}
+.login{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.log-btn{
+    text-transform: capitalize;
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+.sign{
+    background:none;
+    color: black;
+    border: 3px solid black;
+}
+.sign:hover{
+    background-color: white;
+    transition: all 1s ease;
+}
+.forgot-password{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.forgot-password a{
+    text-decoration: none;
+}
+footer{
+    background: linear-gradient(120deg, white, white);
+    width: 100%;
+    height: 15vh;
+    position: absolute;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-size: 12px;
+}
