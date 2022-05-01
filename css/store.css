@@ -3,17 +3,26 @@
     padding: 0;
     font-family: 'Poppins light';
 }
-body{
-    background: linear-gradient(120deg, silver, rgb(34, 33, 33));
-}
+
 header{  
-    height: 12vh;
+    height: 20vh auto;
+    width: 100%;
+    background:linear-gradient(140deg, rgb(134, 91, 10), rgb(228, 228, 98));
+    position: fixed;
+    z-index: 12;
+    margin-top: -40px;
+    box-shadow: 0px 6px 5px 0px rgba(72,61,61,0.75);
+}
+main{
+    padding-top: 70px;
+    margin-top: 40px;
     width: 100%;
 }
+
 nav ul{
     display: flex;
-    justify-content:flex-end;
-    padding-top: 30px;
+    justify-content:space-around;
+    padding-top: 20px;
     align-items: center;
 }
 nav li{
@@ -21,9 +30,9 @@ nav li{
     padding: 10px;
 }
 nav a{
-    color: white;
+    color: rgb(231, 224, 224);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -36,30 +45,35 @@ nav a:hover{
     border-bottom: 3px solid black;
     font-size: 20px;
 }
-
-main{
-    margin-top: 40px;
+.search-form{
     width: 100%;
 }
-.search-form{
-    display: flex;
-    justify-content:center;
-}
 .search-input{
-    padding: 12px;
+    padding: 10px;
     border: none;
     text-align: center;
     letter-spacing: 2px;
-    width: 70%;
+    width: 20%;
+    
+}
+.search-input:hover{
+    width: 50%;
+    transition: all 2s ease;
+    box-shadow: -3px 3px 32px 8px rgba(0,0,0,0.61);
+    border-bottom: 2px solid rgb(24, 23, 23);
+}
+.search-input:focus{
+    outline: none;
 }
 .search-btn{
-    padding: 12px;
-    border: none;
-    background-color: black;
-    color: white;
+    padding: 10px;
+    border: none; 
+    color: rgb(15, 15, 15);
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.5 ease;
+    background: none;
+    font-size: 1.2rem;
 }
 .search-btn:focus{
     outline: none;
@@ -68,8 +82,44 @@ main{
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
+.search-btn:hover{
+    transform: skew(10deg) translate(-4px,5px);
+    transition: all 1s ease;
+}
+.intro .info-section{
+    text-align: center;
+    margin: 30px 0px -40px 0px;
+    text-align: justify;
+    padding: 10px;
+    
+}
+.page-heading{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-align: center;
+    animation-name: textMove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.intro p, .info-paragraph{
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: rgb(202, 209, 207, 0.5);
+    padding: 5px;
+    animation-name: pMove;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    
+}
+.info-heading{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
 .grid-container{
-    margin-top: 40px;
+    
     background-color: white;
     padding: 10px;
     display: block;
@@ -85,34 +135,76 @@ main{
     width: 100%;
     margin-top: 40px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
     align-content: flex-start;
-    border-bottom: 1px solid black;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.creator{
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    padding: 10px;
+    color: rgb(126, 85, 9);
 }
 .item-container{
     display: block;
 }
 .pic{
     width: 60%;
+    padding-left: 10px;
+    padding-top: 20px;
 }
 .info{
     width: 40%;
     line-height: 2rem;
     text-align: justify;
-    font-weight: bold;
 }
-
 .sitem-pic{
-    width: 80%;
-    height: 25vh;
+    width: 70%;
+    height: 18vh;
+    float: left;
+    cursor: pointer;
+    animation-name: moveCar;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+}
+.sitem-pic:hover{
+    transition: all 2s ease;
+    transform: translate(21px,0px);
 }
 .description{
     color: rgb(32, 30, 30);
     font-size: 14px;
     color: brown;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-decoration: underline;
 }
 .s-price{
     color: rgb(27, 4, 4);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.fa-heart{
+    color: rgb(219, 29, 29);
+    padding: 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    animation-name: beat;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.fa-heart:hover{
+    color: rgb(240, 106, 106);
+    transition: all 1s ease;
+    font-size: 1.8;
+}
+.fa-heart:active{
+    transform: scale(0.70);
+    box-shadow: 3px 2px 22px 1px rgba(2, 2, 2, 0.24);
+    transition: all 1s ease;
 }
 .add-to-cart{
     padding: 10px;
@@ -120,13 +212,18 @@ main{
     background: linear-gradient(120deg, rgb(13, 126, 13), rgb(65, 62, 62));
     color: white;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .add-to-cart:hover{
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    background: linear-gradient(120deg, rgb(26, 197, 26), rgb(65, 62, 62));
+    transition: all 2s ease;
 }
 .add-to-cart:active{
-    transform: scale(0.98);
+    transform: scale(0.70);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    transition: all 1s ease;
 }
 footer{
     background: linear-gradient(120deg, rgb(177, 169, 169), white);
@@ -135,6 +232,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
 }
 footer p{
     font-size: 12px;
@@ -217,8 +315,9 @@ footer p{
 
 }
 .status{
-    color: rgb(12, 12, 129);
+    color: rgb(49, 49, 126);
     font-size: 13px;
+    letter-spacing: 1px;
 }
 .p-btn{
     padding-top: 30px;
@@ -252,13 +351,13 @@ footer p{
 .modal-btn{
     background:none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 .modal-btn:hover{
     background-color: white;
     transition: all 1s ease;
-    padding: 5px;
+    padding: 10px;
 }
 .modal-btn:active{
     transform: scale(0.98);
@@ -282,3 +381,38 @@ footer p{
 .count{
     color: white;
 }
+
+@keyframes moveCar{
+    50%{
+        transform: translate(15px, 0px);
+    }
+}
+@keyframes beat{
+    50%{
+        transform: scale(0.8);
+    }
+}
+@keyframes textMove {
+    0%{
+        letter-spacing: 3px;
+    }
+    50%{
+        letter-spacing: 2px;
+    }
+    100%{
+        letter-spacing: 0px;
+    }
+}
+@keyframes pMove{
+    0%{
+        letter-spacing: 3px; 
+    }
+    50%{
+        letter-spacing: 2px;
+    }
+    100%{
+        letter-spacing: 0px;
+    }
+}
+
+
