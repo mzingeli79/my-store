@@ -4,7 +4,7 @@
     font-family: 'Poppins light';
 }
 body{
-    background: linear-gradient(120deg, silver, rgb(34, 33, 33));
+    background-color:white
 }
 header{  
     height: 13vh;
@@ -20,17 +20,18 @@ nav li{
     padding: 10px;
 }
 nav a{
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 nav a:hover{
-    background-color: white;
-    color: black;
+    background-color: rgb(10, 10, 10);
+    color: rgb(243, 240, 240);
     padding: 10px;
-    transition: all 1s ease;
+    transition: all 0.5s ease-in-out;
+    box-shadow: -3px 3px 32px 8px rgba(0,0,0,0.20);
 }
 nav a:active{
     transform: scale(0.98);
@@ -41,22 +42,35 @@ nav a:active{
     width: 100%;
 }
 .input-text{
-    background:linear-gradient(120deg, rgb(134, 91, 10), rgb(228, 228, 98));
+    margin: auto;
+    background:linear-gradient(140deg, rgb(134, 91, 10), rgb(228, 228, 98));
     padding: 10px;
+    width: 80%;
+    box-shadow: -3px 3px 32px 8px rgba(0,0,0,0.61);
+    -webkit-box-shadow: -3px 3px 32px 8px rgba(0,0,0,0.61);
+    -moz-box-shadow: -3px 3px 32px 8px rgba(0,0,0,0.61);
 }
 
 .input:focus{
     outline: none;
+    background: none;
+    border-bottom: 2px solid white;
+    transition: all 1.5s ease; 
+    transform: translate(-0px, 8px); 
 }
 
 .input-text h1{
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     justify-content: center;
+    align-items: center;
     color: rgb(250, 250, 250);
     margin-bottom:30px;
-     margin-top: 30px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    animation-name: headingMotion;
+    animation-duration: 3s;
 }
 .input{
     border: none;
@@ -65,7 +79,8 @@ nav a:active{
     text-align: center;
     letter-spacing: 2px;
     display: block;
-    width: 90%
+    width: 90%;
+    
 }
 .login{
     display: flex;
@@ -82,6 +97,17 @@ nav a:active{
     letter-spacing: 2px;
     font-size: 15px;
 }
+.log-btn:hover{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    transition: all 1s ease;
+}
+.log-btn:active{
+    transform: scale(0.08);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    transition: all 2s ease;
+}
 .sign{
     background:none;
     color: black;
@@ -90,6 +116,10 @@ nav a:active{
 .sign:hover{
     background-color: white;
     transition: all 1s ease;
+}
+.sign:active{
+    transform: scale(0.08);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 .forgot-password{
     display: flex;
@@ -111,4 +141,11 @@ footer{
 }
 footer p{
     font-size: 12px;
+}
+
+@keyframes headingMotion{
+    0%{
+        letter-spacing: 2px;
+        transform: translate(-0px,-20px);
+    }
 }
